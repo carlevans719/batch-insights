@@ -91,7 +91,7 @@ func main() {
 		config.Processes = parseListArgs(positionalArgs[3])
 	}
 
-	config.Print()
+	// config.Print()
 
 	computedConfig, err := batchinsights.ValidateAndBuildConfig(config)
 
@@ -100,7 +100,7 @@ func main() {
 		os.Exit(2)
 	}
 
-	computedConfig.Print()
+	// computedConfig.Print()
 	batchinsights.PrintSystemInfo()
 	batchinsights.ListenForStats(computedConfig)
 }
